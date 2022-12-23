@@ -45,5 +45,11 @@ public class BasicNavigations {
 
         System.out.println("currentURL = " + currentURL);
 
+        driver.manage().window().fullscreen();
+
+        driver.close();
+
+        driver.quit();
+
     }
 }
