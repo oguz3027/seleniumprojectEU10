@@ -38,9 +38,9 @@ public class T2_getText_getAttribute {
         String expectedHREF = "forgot_password=yes";
 
         if (hrefOfForgotPassword.contains(expectedHREF)){
-            System.out.println("Href verification PASSED");
+            System.out.println("Href attribute verification PASSED");
         }else {
-            System.out.println("Href verification FAILED!!!");
+            System.out.println("Href attribute verification FAILED!!!");
         }
 
 
