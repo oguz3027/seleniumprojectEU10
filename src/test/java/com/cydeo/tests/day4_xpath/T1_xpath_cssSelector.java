@@ -43,5 +43,8 @@ public class T1_xpath_cssSelector {
         System.out.println("poweredByCydeo.isDisplayed() = " + poweredByCydeo.isDisplayed());
 
 
+        driver.close();
+
+
     }
 }
