@@ -1,4 +1,4 @@
-package com.cydeo.homeworks;
+package com.cydeo.homeworks.day2_Homeworks;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -6,27 +6,32 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Zero_Bank_Header_Verification {
+public class PracticeCydeo_ClassLocator {
     public static void main(String[] args) {
 
         WebDriverManager.chromedriver().setup();
 
         WebDriver driver = new ChromeDriver();
 
-        driver.get("http://zero.webappsecurity.com/login.html");
+        driver.manage().window().maximize();
 
-        WebElement headerText = driver.findElement(By.className("page-header"));
-        String actualHeaderText = headerText.getText();
+        driver.get("https://practice.cydeo.com/inputs");
 
-        String expectedHeaderText = "Log in to ZeroBank";
+        WebElement homeButton = driver.findElement(By.linkText("Home"));
 
-        if (actualHeaderText.equals(expectedHeaderText)){
+        homeButton.click();
+
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "Practice";
+
+        if (actualTitle.equals(expectedTitle)){
             System.out.println("PASSED");
-        }else {
+        }else{
             System.out.println("FAILED");
         }
 
         driver.close();
+
 
 
 

@@ -1,4 +1,4 @@
-package com.cydeo.homeworks;
+package com.cydeo.homeworks.day2_Homeworks;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
