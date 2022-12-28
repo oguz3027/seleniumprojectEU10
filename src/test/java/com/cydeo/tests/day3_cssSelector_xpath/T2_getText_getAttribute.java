@@ -43,6 +43,7 @@ public class T2_getText_getAttribute {
             System.out.println("Href attribute verification FAILED!!!");
         }
 
+        driver.close();
 
 
 
