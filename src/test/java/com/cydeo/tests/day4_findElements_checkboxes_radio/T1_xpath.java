@@ -22,6 +22,7 @@ public class T1_xpath {
         System.out.println("homeLink.isDisplayed() = " + homeLink.isDisplayed());
 
         WebElement forgotPassword = driver.findElement(By.xpath("//div/div/div/h2"));
+        //WebElement forgotPassword = driver.findElement(By.xpath("//h2[text()='Forgot Password']"));
         //*[@id="content"]/div/h2
         System.out.println(forgotPassword.getText());
         System.out.println("forgotPassword.isDisplayed() = " + forgotPassword.isDisplayed());
