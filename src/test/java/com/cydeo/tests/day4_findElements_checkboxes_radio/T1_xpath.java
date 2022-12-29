@@ -1,4 +1,4 @@
-package com.cydeo.tests.day4_xpath;
+package com.cydeo.tests.day4_findElements_checkboxes_radio;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class T1_xpath_cssSelector {
+public class T1_xpath {
     public static void main(String[] args) {
 
         WebDriverManager.chromedriver().setup();
@@ -17,12 +17,12 @@ public class T1_xpath_cssSelector {
 
         driver.get("https://practice.cydeo.com/forgot_password");
 
-        WebElement homeLink = driver.findElement(By.cssSelector("a[class='nav-link']"));
+        WebElement homeLink = driver.findElement(By.xpath("//a[@class='nav-link']"));
         System.out.println(homeLink.getText());
         System.out.println("homeLink.isDisplayed() = " + homeLink.isDisplayed());
 
         WebElement forgotPassword = driver.findElement(By.xpath("//div/div/div/h2"));
-                                                                             //*[@id="content"]/div/h2
+        //*[@id="content"]/div/h2
         System.out.println(forgotPassword.getText());
         System.out.println("forgotPassword.isDisplayed() = " + forgotPassword.isDisplayed());
 
@@ -30,7 +30,7 @@ public class T1_xpath_cssSelector {
         System.out.println(e_mail.getText());
         System.out.println("e_mail.isDisplayed() = " + e_mail.isDisplayed());
 
-        WebElement e_mailText = driver.findElement(By.cssSelector("input[name='email']"));
+        WebElement e_mailText = driver.findElement(By.xpath("//input[@name='email']"));
         System.out.println(e_mailText.getText());
         System.out.println("e_mailText.isDisplayed() = " + e_mailText.isDisplayed());
 
@@ -43,7 +43,6 @@ public class T1_xpath_cssSelector {
         System.out.println("poweredByCydeo.isDisplayed() = " + poweredByCydeo.isDisplayed());
 
 
-        driver.close();
 
 
     }
