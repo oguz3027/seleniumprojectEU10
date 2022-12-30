@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import java.util.concurrent.TimeUnit;
 
 public class IntagramTask {
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException {
         /*
         WebDriverManager.chromedriver().setup();
 
@@ -53,7 +53,7 @@ public class IntagramTask {
             System.out.println("expectedErrorMessage = " + expectedErrorMessage);
         }
 
-        driver.close();
+
 
 
     }
