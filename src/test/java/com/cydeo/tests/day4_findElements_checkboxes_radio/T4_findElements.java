@@ -12,7 +12,7 @@ public class T4_findElements {
 
         WebDriver driver = WebDriverFactory.getDriver("chrome");
 
-        driver.manage().window().maximize();
+        WebDriverFactory.maximize(driver);
 
         driver.get("https://practice.cydeo.com/abtest");
 
