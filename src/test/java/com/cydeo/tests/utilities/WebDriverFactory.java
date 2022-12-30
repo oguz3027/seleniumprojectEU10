@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class WebDriverFactory {
     public static WebDriver getDriver(String browserType) {
 
@@ -23,8 +25,16 @@ public class WebDriverFactory {
             System.out.println("Driver = null");
             return null;
         }
-
-
-
     }
+
+
+    public static void maximize(WebDriver driver) {
+        driver.manage().window().maximize();
+    }
+
+    public static WebDriver.Timeouts wait(WebDriver driver, long number, TimeUnit timeUnit){
+        return driver.manage().timeouts().implicitlyWait(number,timeUnit);
+    }
+
+
 }
