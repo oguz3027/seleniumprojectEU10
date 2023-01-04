@@ -32,9 +32,10 @@ public class WebDriverFactory {
         driver.manage().window().maximize();
     }
 
-    public static WebDriver.Timeouts wait(WebDriver driver, long number, TimeUnit timeUnit){
-        return driver.manage().timeouts().implicitlyWait(number,timeUnit);
+    public static WebDriver.Timeouts wait(WebDriver driver){
+        return driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
     }
+
 
 
 }
