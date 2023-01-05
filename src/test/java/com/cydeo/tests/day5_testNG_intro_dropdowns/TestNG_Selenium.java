@@ -1,0 +1,22 @@
+package com.cydeo.tests.day5_testNG_intro_dropdowns;
+
+import com.cydeo.tests.utilities.WebDriverFactory;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class TestNG_Selenium {
+
+    @Test
+    public void selenium_test(){
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        WebDriverFactory.maximize(driver);
+        WebDriverFactory.implicitlyWait(driver);
+        driver.get("https://www.google.com");
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "Google";
+
+        Assert.assertEquals(actualTitle,expectedTitle);
+
+    }
+}
