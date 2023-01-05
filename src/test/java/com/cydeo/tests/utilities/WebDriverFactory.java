@@ -36,6 +36,11 @@ public class WebDriverFactory {
         return driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
     }
 
+    public static void refresh(WebDriver driver){
+        driver.navigate().refresh();
+    }
+
+
 
 
 }
