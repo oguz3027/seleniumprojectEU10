@@ -14,7 +14,7 @@ public class T3_RadioButton_cont {
 
         WebDriverFactory.maximize(driver);
 
-        WebDriverFactory.wait(driver);
+        WebDriverFactory.implicitlyWait(driver);
 
         driver.get("https://practice.cydeo.com/radio_buttons");
 

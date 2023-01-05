@@ -12,7 +12,7 @@ public class T2_RadioButton {
 
         WebDriverFactory.maximize(driver);
 
-        WebDriverFactory.wait(driver);
+        WebDriverFactory.implicitlyWait(driver);
 
         driver.get("https://practice.cydeo.com/radio_buttons");
 

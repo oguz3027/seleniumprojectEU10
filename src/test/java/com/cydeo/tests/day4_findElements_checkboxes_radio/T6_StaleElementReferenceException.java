@@ -10,7 +10,7 @@ public class T6_StaleElementReferenceException {
 
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         WebDriverFactory.maximize(driver);
-        WebDriverFactory.wait(driver);
+        WebDriverFactory.implicitlyWait(driver);
 
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

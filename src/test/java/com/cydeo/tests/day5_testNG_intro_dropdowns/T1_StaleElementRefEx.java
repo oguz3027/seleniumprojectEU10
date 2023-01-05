@@ -14,7 +14,7 @@ public class T1_StaleElementRefEx {
         WebDriverFactory.maximize(driver);
 
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        WebDriverFactory.wait(driver);
+        WebDriverFactory.implicitlyWait(driver);
 
         driver.get("https://practice.cydeo.com/add_remove_elements/");
 
