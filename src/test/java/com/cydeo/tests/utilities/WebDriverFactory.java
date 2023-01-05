@@ -32,7 +32,7 @@ public class WebDriverFactory {
         driver.manage().window().maximize();
     }
 
-    public static WebDriver.Timeouts wait(WebDriver driver){
+    public static WebDriver.Timeouts implicitlyWait(WebDriver driver){
         return driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
     }
 
