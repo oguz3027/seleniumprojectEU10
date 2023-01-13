@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.Set;
+
 public class T1_WindowHandling {
 
     WebDriver driver;
@@ -26,7 +28,13 @@ public class T1_WindowHandling {
         ((JavascriptExecutor) driver).executeScript("window.open('https://etsy.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('https://facebook.com','_blank');");
 
+        Set<String> allWindowHandles = driver.getWindowHandles();
 
+        for (String each : allWindowHandles) {
+
+            driver.switchTo().window(each);
+
+        }
 
 
     }
