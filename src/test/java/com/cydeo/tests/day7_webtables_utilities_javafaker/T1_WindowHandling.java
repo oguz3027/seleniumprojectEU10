@@ -36,6 +36,10 @@ public class T1_WindowHandling {
 
             System.out.println("Current URL : " + driver.getCurrentUrl());
 
+            if (driver.getCurrentUrl().contains("etsy")){
+                break;
+            }
+
         }
 
 
