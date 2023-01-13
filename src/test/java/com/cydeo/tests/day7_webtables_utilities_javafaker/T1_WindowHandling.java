@@ -3,6 +3,7 @@ package com.cydeo.tests.day7_webtables_utilities_javafaker;
 import com.cydeo.tests.utilities.WebDriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -41,6 +42,11 @@ public class T1_WindowHandling {
             }
 
         }
+
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "Etsy";
+
+        Assert.assertTrue(actualTitle.contains(expectedTitle));
 
 
     }
