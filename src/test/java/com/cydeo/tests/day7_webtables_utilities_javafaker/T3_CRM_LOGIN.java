@@ -32,7 +32,7 @@ public class T3_CRM_LOGIN {
         WebElement loginButton = driver.findElement(By.xpath("//input[@class='login-btn']"));
         loginButton.click();
 
-        BrowserUtils.verifyTitle(driver,"Portal");
+        BrowserUtils.verifyTitle(driver,"My tasks");
 
     }
 }
