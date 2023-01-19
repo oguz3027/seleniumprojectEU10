@@ -13,7 +13,7 @@ public class T6_JavascriptExecutor {
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
-        js.executeScript("");
+        js.executeScript("window.scrollBy(0,0)");
 
 
     }
