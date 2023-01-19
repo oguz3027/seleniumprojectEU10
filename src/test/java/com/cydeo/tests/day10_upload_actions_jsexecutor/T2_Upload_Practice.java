@@ -1,6 +1,10 @@
 package com.cydeo.tests.day10_upload_actions_jsexecutor;
 
+import com.cydeo.tests.utilities.BrowserUtils;
 import com.cydeo.tests.utilities.Driver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class T2_Upload_Practice {
@@ -9,6 +13,18 @@ public class T2_Upload_Practice {
     public void upload_test(){
         Driver.getDriver().get("https://practice.cydeo.com/upload" );
 
+        String path = "C:\\Users\\CASPER EXCALIBUR\\Desktop\\Shape.png";
 
+        WebElement fileUpload = Driver.getDriver().findElement(By.id("file-upload"));
+
+        BrowserUtils.sleep(2);
+        fileUpload.sendKeys(path);
+
+        WebElement uploadButton = Driver.getDriver().findElement(By.id("file-submit"));
+        uploadButton.click();
+
+        WebElement fileUploadedHeader = Driver.getDriver().findElement(By.tagName("h3"));
+
+        Assert.assertTrue(fileUploadedHeader.isDisplayed());
     }
 }
