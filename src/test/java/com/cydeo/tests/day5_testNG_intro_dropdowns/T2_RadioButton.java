@@ -25,9 +25,9 @@ public class T2_RadioButton {
         System.out.println("hockeyButton.isSelected() = " + hockeyButton.isSelected());
 
         if(hockeyButton.isSelected()){
-            System.out.println("Butoon is selected. Verification PASSED");
+            System.out.println("Button is selected. Verification PASSED");
         }else{
-            System.out.println("Butoon is not selected. Verification FAILED");
+            System.out.println("Button is not selected. Verification FAILED");
         }
 
     }
