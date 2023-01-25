@@ -31,7 +31,7 @@ public class T1_Alert_Practices {
 
         Alert alert = driver.switchTo().alert();
 
-        alert.accept();
+        alert.dismiss();
 
         WebElement resultText = driver.findElement(By.xpath("//p[.='You successfully clicked an alert']"));
 
