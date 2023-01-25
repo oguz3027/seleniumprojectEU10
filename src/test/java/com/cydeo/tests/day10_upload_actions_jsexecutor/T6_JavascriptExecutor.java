@@ -21,12 +21,12 @@ public class T6_JavascriptExecutor {
 
         }
 
-        for (int i = 0; i < 10; i++) {
+        //for (int i = 0; i < 10; i++) {
 
             BrowserUtils.sleep(1);
             js.executeScript("window.scrollBy(0,-750)");
 
-        }
+        //}
 
 
     }
