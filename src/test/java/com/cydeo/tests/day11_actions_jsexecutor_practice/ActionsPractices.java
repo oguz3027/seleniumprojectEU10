@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class ActionsPractices {
 
     @Test
-    public void task_4_and_task_5_test(){
+    public void task_4_and_task_5_test() {
 
         Driver.getDriver().get("https://practice.cydeo.com");
 
@@ -20,10 +20,24 @@ public class ActionsPractices {
 
         actions.moveToElement(cydeoLink).perform();
 
-        actions.sendKeys(Keys.PAGE_UP,Keys.PAGE_UP).perform();
+        actions.sendKeys(Keys.PAGE_UP, Keys.PAGE_UP).perform();
 
-
-
-
+        Driver.closeDriver();
     }
+
+    @Test
+    public void test2() {
+        Driver.getDriver().get("https://practice.cydeo.com");
+        Driver.closeDriver();
+    }
+    @Test
+    public void test3() {
+        Driver.getDriver().get("https://practice.cydeo.com");
+        Driver.closeDriver();
+    }@Test
+    public void test4() {
+        Driver.getDriver().get("https://practice.cydeo.com");
+        Driver.closeDriver();
+    }
+
 }
