@@ -1,5 +1,6 @@
 package com.cydeo.tests.day11_actions_jsexecutor_practice;
 
+import com.cydeo.tests.utilities.BrowserUtils;
 import com.cydeo.tests.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -20,9 +21,13 @@ public class ActionsPractices {
 
         actions.moveToElement(cydeoLink).perform();
 
-        actions.sendKeys(Keys.PAGE_UP, Keys.PAGE_UP).perform();
+        BrowserUtils.sleep(2);
+
+        actions.sendKeys(Keys.PAGE_UP, Keys.PAGE_UP,Keys.PAGE_UP, Keys.PAGE_UP).perform();
 
         Driver.closeDriver();
+
+
     }
 
     @Test
@@ -32,7 +37,7 @@ public class ActionsPractices {
     }
     @Test
     public void test3() {
-        Driver.getDriver().get("https://practice.cydeo.com");
+        Driver.getDriver().get("https://google.com");
         Driver.closeDriver();
     }@Test
     public void test4() {

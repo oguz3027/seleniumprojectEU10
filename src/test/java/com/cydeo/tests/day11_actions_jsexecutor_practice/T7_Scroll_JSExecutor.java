@@ -15,6 +15,7 @@ public class T7_Scroll_JSExecutor {
 
         WebElement cydeoLink = Driver.getDriver().findElement(By.linkText("CYDEO"));
         WebElement homeLink =  Driver.getDriver().findElement(By.linkText("Home"));
+        WebElement forteen_ten = Driver.getDriver().findElement(By.xpath("(//td[@class='column-10'])[14]"));
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
@@ -22,7 +23,11 @@ public class T7_Scroll_JSExecutor {
         js.executeScript("arguments[0].scrollIntoView(true)", cydeoLink);
 
         BrowserUtils.sleep(2);
-        js.executeScript("arguments[1].scrollIntoView(true)", cydeoLink,homeLink);
+        js.executeScript("arguments[2].scrollIntoView(true)", cydeoLink,homeLink,forteen_ten);
+        //js.executeScript("arguments[0].scrollIntoView(true)", homeLink);
+
+
+
 
 
 

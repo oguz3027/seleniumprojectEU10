@@ -3,10 +3,13 @@ package com.cydeo.tests.utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.opera.OperaDriver;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
@@ -23,8 +26,14 @@ public class Driver {
 
             switch (browserType){
                 case "chrome":
+
+                    ChromeOptions options = new ChromeOptions();
+                    Map<String, Object> prefs = new HashMap<String, Object>();
+                    prefs.put("intl.accept_languages", "en-GB");
+                    options.setExperimentalOption("prefs", prefs);
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    //WebDriver driver = new ChromeDriver(options);
+                    driver = new ChromeDriver(options);
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
