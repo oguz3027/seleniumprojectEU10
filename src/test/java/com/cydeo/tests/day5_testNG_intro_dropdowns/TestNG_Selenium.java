@@ -27,6 +27,9 @@ public class TestNG_Selenium {
         WebDriverFactory.maximize(driver);
         WebDriverFactory.implicitlyWait(driver);
         driver.get("https://www.google.com");
+
+
+
         String actualTitle = driver.getTitle();
         String expectedTitle = "Google";
 
