@@ -22,7 +22,7 @@ public class T6_StaleElemenReferenceException {
     public void test1(){
 
         driver.get("https://practice.cydeo.com/abtest");
-
+        
         WebElement cydeo = driver.findElement(By.xpath("//a[@href='https://cydeo.com/']"));
 
         System.out.println(cydeo.isDisplayed());
