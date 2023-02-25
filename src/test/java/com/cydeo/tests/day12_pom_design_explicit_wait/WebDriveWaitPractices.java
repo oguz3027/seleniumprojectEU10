@@ -37,9 +37,17 @@ public class WebDriveWaitPractices {
 
         dynamicLoad1Page.startButton.click();
 
-        wait.until(ExpectedConditions.invisibilityOf(dynamicLoad1Page.loadingBar);
+        wait.until(ExpectedConditions.invisibilityOf(dynamicLoad1Page.loadingBar));
 
-        
+        Assert.assertTrue(dynamicLoad1Page.inputUsername.isDisplayed());
+
+        dynamicLoad1Page.inputUsername.sendKeys("tomsmith");
+        dynamicLoad1Page.inputPassword.sendKeys("somethingwrong");
+
+        dynamicLoad1Page.submitButton.click();
+
+        Assert.assertTrue(dynamicLoad1Page.errorMessage.isDisplayed());
+
 
     }
 
